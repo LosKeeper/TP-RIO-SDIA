@@ -3,6 +3,9 @@
 ## [Apprentissage automatique](Apprentissage_automatique/sujet.pdf)
 
 > Il est nécessaire d'installer les librairies `pandas`, `matplotlib`, `sklearn`, `numpy`, `torch` et `torchsummary`.
+```ps1
+pip install -r requirements.txt
+```
 
 Liste des exercices déjà corrigés :
 
@@ -15,6 +18,3 @@ Liste des exercices déjà corrigés :
 - [Exercice 7](Apprentissage_automatique/exo7.py) : Estimation des hyperparamètres
 - [Exercice 8](Apprentissage_automatique/exo8.py) : Mesures de la confiance des résultats couplée avec l'estimation des hyper-paramètres
 
-```ps1
-pip install -r requirements.txt
-```
