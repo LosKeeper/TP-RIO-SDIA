@@ -4,7 +4,6 @@ from generateData import generate_random_dataset_xor_high_dimension
 from sklearn.metrics import make_scorer,balanced_accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 
-
 # Generate dataset
 size = 3000
 dataset = generate_random_dataset_xor_high_dimension(size)
