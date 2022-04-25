@@ -18,3 +18,7 @@ Liste des exercices déjà corrigés :
 - [Exercice 6](Apprentissage_automatique/exo6.py) : Sur-apprentissage
 - [Exercice 7](Apprentissage_automatique/exo7.py) : Estimation des hyperparamètres
 - [Exercice 8](Apprentissage_automatique/exo8.py) : Mesures de la confiance des résultats couplée avec l'estimation des hyper-paramètres
+<<<<<<< HEAD
+=======
+- [Exercice 9](Apprentissage_automatique/exo9a.py) : Forêts aléatoires
+>>>>>>> dev-dumond
