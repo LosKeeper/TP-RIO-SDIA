@@ -5,7 +5,7 @@ from sklearn.metrics import make_scorer,balanced_accuracy_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
-normalisation = 0
+normalisation = 1
 # Generate training dataset
 size = 200
 dataset = generate_random_dataset_xor(size)

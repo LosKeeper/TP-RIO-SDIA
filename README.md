@@ -12,6 +12,7 @@ Liste des exercices déjà corrigés :
 - [Exercice 4](Apprentissage_automatique/exo4.py) : Normalisation des données
 - [Exercice 5](Apprentissage_automatique/exo5.py) : Donées déséquilibrées
 - [Exercice 6](Apprentissage_automatique/exo6.py) : Sur-apprentissage
+- [Exercice 7](Apprentissage_automatique/exo7.py) : Estimation des hyperparamètres
 
 ```ps1
 pip install -r requirements.txt
