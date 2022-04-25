@@ -25,7 +25,10 @@ for g in [0.001,0.01,0.1,1,10,100]:
     model = svm.SVC(kernel='rbf',class_weight='balanced',gamma=g)
     process(model,x,y)
     
-    
-        
-
+# Generate data to test performances
+dataset_p=generate_random_dataset_xor(size)
+features_p = dataset[['x', 'y']]
+label_p = dataset['target']
+x_p = features_p.values
+y_p = label_p.values
 
