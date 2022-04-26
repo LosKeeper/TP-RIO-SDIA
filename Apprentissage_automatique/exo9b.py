@@ -33,26 +33,26 @@ for f in range(x.shape[1]):
     print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
 
-t1 = time.clock()
+t1 = time.clock_gettime(0)
 s = SelectFromModel(forest, prefit=True,max_features=3)
 x_new = s.transform(x)
 print(x_new.shape)
 print(x.shape)
-print("time for SelectFromModel: {}".format(time.clock()-t1))
+print("time for SelectFromModel: {}".format(time.clock_gettime(0)-t1))
 
-t1 = time.clock()
+t1 = time.clock_gettime(0)
 forest=RandomForestClassifier(n_estimators=40,class_weight='balanced_subsample',criterion='entropy',oob_score=True)
 s = RFE(forest,n_features_to_select=3)
 s = s.fit(x, y)
 print(s.support_)
 print(s.ranking_)
-print("time for RFE: {}".format(time.clock()-t1))
+print("time for RFE: {}".format(time.clock_gettime(0)-t1))
 
-t1 = time.clock()
+t1 = time.clock_gettime(0)
 s = RFECV(forest,cv=3,scoring=make_scorer(balanced_accuracy_score,needs_proba=False))
 s = s.fit(x, y)
 print(s.support_)
 print(s.ranking_)
-print("time for RFECV: {}".format(time.clock()-t1))
+print("time for RFECV: {}".format(time.clock_gettime(0)-t1))
 #SequentialFeatureSelector from version 0.24
 
