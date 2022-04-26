@@ -35,6 +35,7 @@ print("Feature ranking:")
 for f in range(x.shape[1]):
     print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
+
 t1 = time.thread_time_ns()
 s = SelectFromModel(forest, prefit=True, max_features=3)
 x_new = s.transform(x)
@@ -60,3 +61,4 @@ print(s.support_)
 print(s.ranking_)
 print(f"time for RFECV: {(time.thread_time_ns() - t1):,}ns")
 #SequentialFeatureSelector from version 0.24
+print(s.grid_scores_)
