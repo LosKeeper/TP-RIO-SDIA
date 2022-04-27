@@ -14,9 +14,11 @@ batch_size = 20
 # convert data to torch.FloatTensor
 transform = transforms.ToTensor()
 
-test_data = datasets.MNIST(root='data', train=False, download=True, transform=transform)
+test_data = datasets.MNIST(root='data', train=False,
+                           download=True, transform=transform)
 
-test_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, num_workers=num_workers)
+test_loader = torch.utils.data.DataLoader(
+    test_data, batch_size=batch_size, num_workers=num_workers)
 
 model = torch.load("model.pt")
 # initialize lists to monitor test loss and accuracy
@@ -45,7 +47,8 @@ for i in range(10):
         print('Test Accuracy of %5s: %2d%% (%2d/%2d)' % (str(i), 100 * class_correct[i] / class_total[i],
                                                          np.sum(class_correct[i]), np.sum(class_total[i])))
     else:
-        print('Test Accuracy of %5s: N/A (no training examples)' % (classes[i]))
+        print('Test Accuracy of %5s: N/A (no training examples)' %
+              (classes[i]))
 
 print('\nTest Accuracy (Overall): %2d%% (%2d/%2d)' %
       (100. * np.sum(class_correct) / np.sum(class_total), np.sum(class_correct), np.sum(class_total)))
@@ -53,7 +56,7 @@ print('\nTest Accuracy (Overall): %2d%% (%2d/%2d)' %
 # obtain one batch of test images
 dataiter = iter(test_loader)
 
-for i in range(20):  #On regarde ici les 10 premiers bash, soit 200 images
+for i in range(20):  # On regarde ici les 10 premiers bash, soit 200 images
     images, labels = dataiter.next()
 
     # get sample outputs
@@ -66,7 +69,7 @@ for i in range(20):  #On regarde ici les 10 premiers bash, soit 200 images
     # plot the images in the batch, along with predicted and true labels
     fig = plt.figure(figsize=(25, 4))
     for idx in np.arange(20):
-        ax = fig.add_subplot(2, 20 / 2, idx + 1, xticks=[], yticks=[])
+        ax = fig.add_subplot(2, 10, idx + 1, xticks=[], yticks=[])
         ax.imshow(np.squeeze(images[idx]), cmap='gray')
         ax.set_title("{} ({})".format(str(preds[idx].item()), str(labels[idx].item())),
                      color=("green" if preds[idx] == labels[idx] else "red"))
