@@ -4,3 +4,4 @@ sklearn
 numpy
 torch
 torchsummary
+torchvision
