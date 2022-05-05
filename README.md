@@ -8,7 +8,7 @@
 pip install -r requirements.txt
 ```
 
-Liste des exercices corrigés par le prof dans le dossier [Correction](Correction/) :
+Liste des exercices corrigés par le prof dans le dossier [Correction](Apprentissage_automatique/Correction/) :
 
 - [Exercice 1](Apprentissage_automatique/Correction/exo1Solution.py) : SVM en cas simple
 - [Exercice 2](Apprentissage_automatique/Correction/exo2Solution.py) : SVM avec matrice de confusion
